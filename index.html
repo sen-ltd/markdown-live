@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Live</title>
+  <link rel="stylesheet" href="style.css">
+  <style id="theme-style"></style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-left">
+      <span class="app-title">Markdown Live</span>
+    </div>
+    <div class="header-center">
+      <label class="theme-label" for="theme-select">Theme</label>
+      <select id="theme-select" class="theme-select" aria-label="Theme">
+        <option value="github">GitHub</option>
+        <option value="qiita">Qiita</option>
+        <option value="zenn">Zenn</option>
+      </select>
+    </div>
+    <div class="header-right">
+      <label class="scroll-sync-label">
+        <input type="checkbox" id="scroll-sync-toggle" checked>
+        <span class="scroll-sync-text" title="Scroll sync">↕</span>
+      </label>
+      <button id="btn-copy-html" class="btn btn-secondary">Copy HTML</button>
+      <button id="btn-download" class="btn btn-primary">Save HTML</button>
+      <button id="btn-clear" class="btn btn-ghost">Clear</button>
+      <button id="btn-lang" class="btn btn-ghost btn-lang">JA</button>
+    </div>
+  </header>
+
+  <!-- Mobile tabs -->
+  <div class="mobile-tabs">
+    <button id="tab-editor" class="tab-btn active">Editor</button>
+    <button id="tab-preview" class="tab-btn">Preview</button>
+  </div>
+
+  <main id="main-split" class="main-split">
+    <div id="editor-pane" class="pane editor-pane active">
+      <div class="pane-header">
+        <span id="editor-label" class="pane-label">Editor</span>
+        <span id="save-status" class="save-status" aria-live="polite"></span>
+      </div>
+      <textarea
+        id="editor"
+        class="editor-textarea"
+        placeholder="Type Markdown here..."
+        spellcheck="false"
+        aria-label="Markdown editor"
+      ></textarea>
+    </div>
+
+    <div id="resizer" class="resizer" aria-hidden="true"></div>
+
+    <div id="preview-pane" class="pane preview-pane">
+      <div class="pane-header">
+        <span id="preview-label" class="pane-label">Preview</span>
+      </div>
+      <div id="preview-content" class="preview-content" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <span id="word-count" class="stat">0 words</span>
+    <span class="stat-sep">·</span>
+    <span id="char-count" class="stat">0 chars</span>
+    <span class="stat-sep">·</span>
+    <span id="line-count" class="stat">0 lines</span>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
