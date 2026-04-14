@@ -75,3 +75,10 @@ The parser (`markdown.js`) is a line-based state machine for block elements (hea
 ## License
 
 MIT — Copyright (c) 2026 SEN LLC (SEN 合同会社)
+
+<!-- sen-publish:links -->
+## Links
+
+- 🌐 Demo: https://sen.ltd/portfolio/markdown-live/
+- 📝 dev.to: https://dev.to/sendotltd/writing-a-markdown-parser-from-scratch-with-github-qiita-and-zenn-theme-modes-48g4
+<!-- /sen-publish:links -->
